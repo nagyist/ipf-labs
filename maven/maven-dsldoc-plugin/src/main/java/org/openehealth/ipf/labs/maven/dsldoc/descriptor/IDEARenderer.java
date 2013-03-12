@@ -39,7 +39,7 @@ public class IDEARenderer extends AbstractDslRenderer {
         // the dir there
         // return new File(parent, cls.getPackageName().replace(".", "/") + "/"
         // + cls.getName() + "." + gdsl);
-        return new File(parent, gdsl + "/" + cls.getName() + "." + gdsl);
+        return new File(parent, gdsl + "/" + cls.getPackageName() + "." + gdsl);
     }
 
     public String buildMethodDescriptor(MethodInfo info) {

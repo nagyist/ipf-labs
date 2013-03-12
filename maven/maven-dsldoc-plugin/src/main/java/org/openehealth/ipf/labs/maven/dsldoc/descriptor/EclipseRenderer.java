@@ -33,7 +33,7 @@ public class EclipseRenderer extends AbstractDslRenderer {
 
     @Override
     public File getTargetFile(File parent, JavaClass cls) {
-        return new File(parent, dsld + "/" + cls.getName() + "." + dsld);
+        return new File(parent, dsld + "/" + cls.getPackageName() + "." + dsld);
 
     }
     public String buildSectionDescriptor(SectionInfo section) {

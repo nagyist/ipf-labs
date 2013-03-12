@@ -73,7 +73,7 @@ public abstract class AbstractDslRenderer implements DslRenderer {
     }
     
     protected void writeFile(File output, String content) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(output));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(output, true));
         try {
             writer.write(content);
         }

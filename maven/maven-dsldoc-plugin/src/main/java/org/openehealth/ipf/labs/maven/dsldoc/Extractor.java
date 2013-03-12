@@ -90,10 +90,10 @@ public class Extractor {
             return;
         }
 
-        log.info("Processing sources");
         for (JavaSource src : builder.getSources()) {
             for (JavaClass cls : src.getClasses()) {
                 if (null != cls.getTagByName(Documentation.DSL_TAG)) {
+                    log.info("Now processing class " + cls.getFullyQualifiedName());
                     for (JavaMethod method : cls.getMethods()) {
                         doc.registerMethod(module, cls, method);
                     }
