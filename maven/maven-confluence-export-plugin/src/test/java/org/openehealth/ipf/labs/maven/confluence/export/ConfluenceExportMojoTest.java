@@ -38,7 +38,7 @@ public class ConfluenceExportMojoTest {
     private String user = "exporter";
     private String password = "confluence";
     private String url = "http://repo.openehealth.org/confluence";
-    private String proxyHost = "proxy.proxy.intercomponentware.com";
+    private String proxyHost = "proxy.icw.int";
     private int proxyPort = 3128;
     
     @Before
