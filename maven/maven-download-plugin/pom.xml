@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.openehealth.ipf.labs.maven</groupId>
+    <artifactId>maven-download-plugin</artifactId>
+    <name>maven-download-plugin</name>
+    <packaging>maven-plugin</packaging>
+	<version>0.1-SNAPSHOT</version>
+	
+    <parent>
+        <groupId>org.openehealth.ipf.labs.maven</groupId>
+        <artifactId>maven</artifactId>
+        <version>1.5-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <maven-plugin-api-version>2.2.1</maven-plugin-api-version>
+        <maven-settings-version>2.2.1</maven-settings-version>
+
+        <commons-discovery-version>0.5</commons-discovery-version>
+        <commons-io-version>1.4</commons-io-version>
+        <commons-lang-version>2.4</commons-lang-version>
+        <commons-logging-version>1.1</commons-logging-version>
+        <commons-httpclient-version>4.2.3</commons-httpclient-version>
+        <junit-version>4.8.1</junit-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>${maven-plugin-api-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-artifact</artifactId>
+            <version>${maven-plugin-api-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-settings</artifactId>
+            <version>${maven-settings-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>${commons-logging-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${commons-httpclient-version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpcore</artifactId>
+          <version>${commons-httpclient-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
