@@ -4,7 +4,7 @@
     <artifactId>maven-download-plugin</artifactId>
     <name>maven-download-plugin</name>
     <packaging>maven-plugin</packaging>
-	<version>0.1-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
 	
     <parent>
         <groupId>org.openehealth.ipf.labs.maven</groupId>
@@ -16,9 +16,7 @@
         <maven-plugin-api-version>2.2.1</maven-plugin-api-version>
         <maven-settings-version>2.2.1</maven-settings-version>
 
-        <commons-discovery-version>0.5</commons-discovery-version>
-        <commons-io-version>1.4</commons-io-version>
-        <commons-lang-version>2.4</commons-lang-version>
+        <commons-io-version>2.4</commons-io-version>
         <commons-logging-version>1.1</commons-logging-version>
         <commons-httpclient-version>4.2.3</commons-httpclient-version>
         <junit-version>4.8.1</junit-version>
