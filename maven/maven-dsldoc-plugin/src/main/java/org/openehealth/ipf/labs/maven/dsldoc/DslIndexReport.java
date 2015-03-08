@@ -61,7 +61,7 @@ public class DslIndexReport extends AbstractMavenReport {
     /**
       * The projects in the reactor for aggregation report.
       *
-      * @parameter expression="${reactorProjects}"
+      * @parameter property="reactorProjects"
       * @readonly
       */
      private List<MavenProject> reactorProjects;

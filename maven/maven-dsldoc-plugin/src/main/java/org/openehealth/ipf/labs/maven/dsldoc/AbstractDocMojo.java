@@ -41,7 +41,7 @@ public abstract class AbstractDocMojo extends AbstractMojo {
 
     /**
      * Location of the directories that contain sources for this build.
-     * @parameter expression="${source.trees}"
+     * @parameter property="source.trees"
      */
     protected String[] sourceTrees;
     
@@ -66,14 +66,14 @@ public abstract class AbstractDocMojo extends AbstractMojo {
     
     /**
      * Location of the output directory.
-     * @parameter expression="${output.directory}" default-value="${project.build.outputDirectory}"
+     * @parameter property="output.directory" default-value="${project.build.outputDirectory}"
      * @required
      */
     protected File outputDirectory;
 
     /**
      * Location of the build directory.
-     * @parameter expression="${build.directory}" default-value="${project.build.directory}"
+     * @parameter property="build.directory" default-value="${project.build.directory}"
      * @required
      */
     protected File buildDirectory;
