@@ -5,7 +5,7 @@
     <artifactId>maven</artifactId>
     <name>maven</name>
     <packaging>pom</packaging>
-    <version>1.6</version>
+    <version>1.7-SNAPSHOT</version>
 
     <properties>
         <gpg-plugin-version>1.5</gpg-plugin-version>
