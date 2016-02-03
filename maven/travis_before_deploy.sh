@@ -30,10 +30,9 @@ fi
 # (in many cases this will be master).
 # TRAVIS_COMMIT: The commit that the current build is testing
 if [ -z "$release" ] && [ ! -z "$TRAVIS_BRANCH" ]; then
-    # escape e.g. t/topic so it doesn't look like a folder
 	echo "Checking for TRAVIS_BRANCH"
-    escaped_branch="${TRAVIS_BRANCH//\//-}"
-    release="${escaped_branch}-${TRAVIS_COMMIT}"
+    # escaped_branch="${TRAVIS_BRANCH//\//-}"
+    release="${TRAVIS_BRANCH}-${TRAVIS_COMMIT}"
 fi
 
 if [ -z "$release" ]; then
