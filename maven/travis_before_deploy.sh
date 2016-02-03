@@ -20,6 +20,7 @@
 release=""
 
 # TRAVIS_TAG: If the current build for a tag, this includes the tag’s name
+echo "Checking for TRAVIS_TAG"
 if [ ! -z "$TRAVIS_TAG" ]; then
     release=$TRAVIS_TAG
 fi
@@ -30,6 +31,7 @@ fi
 # TRAVIS_COMMIT: The commit that the current build is testing
 if [ -z "$release" ] && [ ! -z "$TRAVIS_BRANCH" ]; then
     # escape e.g. t/topic so it doesn't look like a folder
+	echo "Checking for TRAVIS_BRANCH"
     escaped_branch="${TRAVIS_BRANCH//\//-}"
     release="${escaped_branch}-${TRAVIS_COMMIT}"
 fi
@@ -46,5 +48,6 @@ cd $TRAVIS_BUILD_DIR
 repo=`basename ${TRAVIS_REPO_SLUG}`
 
 mkdir -p s3-upload/
-zip --quiet -r s3-upload/${TRAVIS_JDK_VERSION}/$repo-$release.zip . -x .git/ **/.git/ 
+echo "creating zip file s3-upload/${TRAVIS_JDK_VERSION}/${repo}-${release}.zip from ${TRAVIS_BUILD_DIR}"
+zip -q -r -x .git s3-upload/${TRAVIS_JDK_VERSION}/${repo}-${release}.zip . 
 echo "zip for s3 created"
