@@ -45,8 +45,9 @@ cd $TRAVIS_BUILD_DIR
 
 # TRAVIS_REPO_SLUG: The slug (in form: owner_name/repo_name) of the repository currently being built. (for example, “oehf/ipf”).
 repo=`basename ${TRAVIS_REPO_SLUG}`
+currentDir = `pwd`
 
 mkdir -p s3-upload/
-echo "creating zip file s3-upload/${TRAVIS_JDK_VERSION}/${repo}-${release}.zip from ${TRAVIS_BUILD_DIR}"
-zip -q -r -x .git s3-upload/${repo}-${release}.zip . 
+echo "being in ${currentDir}, creating zip file s3-upload/${repo}-${release}.zip from ${TRAVIS_BUILD_DIR}"
+zip -q -r s3-upload/$repo-$release.zip . -x ".git"
 echo "zip for s3 created"
