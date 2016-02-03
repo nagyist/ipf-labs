@@ -3,6 +3,19 @@
 
 # Use in .travis.yml
 # before_deploy: wget -O - https://raw.githubusercontent.com/oehf/ipf-labs/master/maven/before_deploy.sh --no-check-certificate | sh
+#
+#  - provider: s3
+#    secret_access_key:
+#      secure: $SECRET_ACCESS_KEY
+#    access_key_id:
+#      secure: $ACCESS_KEY_ID
+#    bucket: "builds.openehealth.org"
+#    skip-cleanup: true
+#    local-dir: s3-upload
+#    upload-dir: ipf
+#    detect_encoding: true
+#    on:
+#      all_branches: true
 
 release=""
 
