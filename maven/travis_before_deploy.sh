@@ -48,5 +48,5 @@ repo=`basename ${TRAVIS_REPO_SLUG}`
 
 mkdir -p s3-upload/
 echo "creating zip file s3-upload/${repo}-${release}.zip from ${TRAVIS_BUILD_DIR}"
-zip -r s3-upload/$repo-$release.zip . -x *.git* s3-upload/\*
+zip -q -r s3-upload/$repo-$release.zip . -x *.git* s3-upload/\*
 echo "zip for s3 created"
