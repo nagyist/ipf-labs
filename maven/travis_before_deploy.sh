@@ -22,7 +22,7 @@ release=""
 # TRAVIS_TAG: If the current build for a tag, this includes the tag’s name
 echo "Checking for TRAVIS_TAG"
 if [ ! -z "$TRAVIS_TAG" ]; then
-    release=$TRAVIS_TAG
+    release="${TRAVIS_TAG}-build-${TRAVIS_BUILD_NUMBER}"
 fi
 
 # TRAVIS_BRANCH: For builds not triggered by a pull request this is the name of the branch currently being built; 
@@ -32,7 +32,7 @@ fi
 if [ -z "$release" ] && [ ! -z "$TRAVIS_BRANCH" ]; then
 	echo "Checking for TRAVIS_BRANCH"
     # escaped_branch="${TRAVIS_BRANCH//\//-}"
-    release="${TRAVIS_BRANCH}-${TRAVIS_COMMIT}"
+    release="${TRAVIS_BRANCH}-build-${TRAVIS_BUILD_NUMBER}"
 fi
 
 if [ -z "$release" ]; then
